@@ -51,5 +51,12 @@ int main(){
     Vector2 vNormalized = vNor.Normalized();
     std::cout<<"Pac man's view vector: \n"<<vNormalized<<std::endl;
     std::cout<<"Pac man's view vector lenght: "<<vNormalized.Length()<<std::endl;
+
+    std::cout<<"\n---------------------------------------"<<std::endl;
+    std::cout<<"\tPacman change direction (Adding Vectors)"<<std::endl;
+    Vector2 r(4, 0);
+    Vector2 d(0, -5);
+    Vector2 rd = r + d;
+    std::cout<<"Pac man's new velocity:\n"<<rd;
     return 0;
 }

@@ -23,12 +23,19 @@ Vector2 Vector2::Normalized() const{
 }
 
 Vector2 Vector2::operator*(float scalar) const{
-    Vector2 normalized;
-    return normalized = (*this) / Length();
+    return Vector2((this->x * this->x)/LengthSqr(), (this->y * this->y)/LengthSqr());
 }
 
 Vector2 Vector2::operator/(float scalar) const{
     return Vector2(this->x / scalar, this->y / scalar);
+}
+
+Vector2 Vector2::operator+(const Vector2& v) const{
+    return Vector2(this->x + v.x, this->y + v.y);
+}
+
+Vector2 Vector2::operator-(const Vector2& v) const{
+    return Vector2(this->x - v.x, this->y - v.y);
 }
 
 std::ostream& operator<<(std::ostream& cout, const Vector2& v2){
