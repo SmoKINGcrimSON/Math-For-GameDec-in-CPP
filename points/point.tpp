@@ -10,6 +10,10 @@ Point::Point(float x, float y){
     this->y = y;
 }
 
+Point Point::operator+(Vector2 v2){
+    return Point(this->x + v2.x, this->y + v2.y);
+}
+
 std::ostream& operator<<(std::ostream& cout, const Point& p){
     cout<<"x: "<<p.x<<"\ny: "<<p.y<<std::endl;
     return cout;
