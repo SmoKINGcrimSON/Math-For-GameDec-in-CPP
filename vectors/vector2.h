@@ -11,6 +11,9 @@ class Vector2{
         Vector2(float, float);
         float Length() const;
         float LengthSqr() const;
+        Vector2 operator*(float) const;
+        Vector2 operator/(float) const;
+        Vector2 Normalized() const;
 };
 
 extern std::ostream& operator<<(std::ostream&, const Vector2&);
