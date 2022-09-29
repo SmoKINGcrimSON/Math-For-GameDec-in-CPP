@@ -5,6 +5,11 @@ Vector2 operator-(const Point2 p1, const Point2 p2){
     return Vector2(p1.x - p2.x, p1.y - p2.y);
 }
 
+float DotProduct(const Vector2& v1, const Vector2& v2){
+    float dotproduct = (v1.x * v2.x) + (v1.y * v2.y);
+    return dotproduct;
+}
+
 int main(){
     std::cout<<"\n---------------------------------------"<<std::endl;
     std::cout<<"\tPoints and vectors-transform point position (P')"<<std::endl;
@@ -58,5 +63,9 @@ int main(){
     Vector2 d(0, -5);
     Vector2 rd = r + d;
     std::cout<<"Pac man's new velocity:\n"<<rd;
+
+    std::cout<<"\n---------------------------------------"<<std::endl;
+    std::cout<<"\tDoct product between two vectors (for implement mechanics like backstabbing)"<<std::endl;
+
     return 0;
 }
