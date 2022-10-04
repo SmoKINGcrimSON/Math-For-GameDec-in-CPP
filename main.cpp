@@ -17,12 +17,14 @@ Vector3 operator-(const Point3 p1, const Point3 p2){
     return Vector3(p1.x - p2.x, p1.y - p2.y, p1.z - p2.z);
 }
 
+float DotProduct(const Vector3& a, const Vector3& b){
+    return a.x * b.x + a.y * b.y + a.z * b.z; 
+}
+
 int main(){
-    Vector3 v(3, 4, 0);
-    std::cout<<"Pac-man's initial speed: "<<v.Lenght()<<std::endl;
-    Vector3 vD = v * 2;
-    std::cout<<"Pac-man's double speed: "<<vD.Lenght()<<std::endl;
-    Vector3 vH = v / 2;
-    std::cout<<"Pac-man's halved speed: "<<vH.Lenght()<<std::endl;
+    Vector3 v1 (0, 3, 4);
+    Vector3 v2 (2, 1, -2);
+    float dotProduct = DotProduct(v1, v2);
+    std::cout<<"Dot product or scalar product between two vectors: "<<dotProduct;
     return 0;
 }

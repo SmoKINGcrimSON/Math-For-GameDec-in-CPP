@@ -12,6 +12,9 @@ class Vector3{
         float SqrLenght() const;
         Vector3 operator*(float) const;
         Vector3 operator/(float) const;
+        Vector3 Normalized() const;
+        Vector3 operator+(const Vector3&) const;
+        Vector3 operator-(const Vector3&) const;
 };
 
 extern std::ostream& operator<<(std::ostream&, Vector3);

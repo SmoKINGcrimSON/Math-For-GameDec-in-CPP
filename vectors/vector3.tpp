@@ -28,6 +28,20 @@ Vector3 Vector3::operator/(float s) const{
     return Vector3(this->x / s, this->y / s, this->z / s);
 }
 
+Vector3 Vector3::Normalized() const{
+    Vector3 normalized;
+    normalized = (*this) / Lenght();
+    return normalized;
+}
+
+Vector3 Vector3::operator+(const Vector3& v) const{
+    return Vector3(this->x + v.x, this->y + v.y, this->z + v.z);
+}
+
+Vector3 Vector3::operator-(const Vector3& v) const{
+    return Vector3(this->x - v.x, this->y - v.y, this->z - v.z);
+}
+
 std::ostream& operator<<(std::ostream& cout, Vector3 v){
     cout<<"x: "<<v.x<<"\ny: "<<v.y<<"\nz: "<<v.z<<std::endl;
     return cout;
