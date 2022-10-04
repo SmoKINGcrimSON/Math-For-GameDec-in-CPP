@@ -19,11 +19,11 @@ float Vector2::LengthSqr() const{
 }
 
 Vector2 Vector2::Normalized() const{
-    return Vector2(this->x/this->Length(), this->y/this->Length());
+    return Vector2(this->x/Length(), this->y/Length());
 }
 
 Vector2 Vector2::operator*(float scalar) const{
-    return Vector2((this->x * this->x)/LengthSqr(), (this->y * this->y)/LengthSqr());
+    return Vector2(this->x * scalar, this->y * scalar);
 }
 
 Vector2 Vector2::operator/(float scalar) const{
