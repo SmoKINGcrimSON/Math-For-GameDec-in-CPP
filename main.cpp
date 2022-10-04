@@ -13,10 +13,16 @@ float DotProduct(const Vector2& v1, const Vector2& v2){
 
 //3D
 
+Vector3 operator-(const Point3 p1, const Point3 p2){
+    return Vector3(p1.x - p2.x, p1.y - p2.y, p1.z - p2.z);
+}
+
 int main(){
-    Point3 p(1, 0, 1);
-    Vector3 v(2, 3, 4);
-    Point3 pPrime = p.AddVector(v);
-    std::cout<<pPrime;
+    Vector3 v(3, 4, 0);
+    std::cout<<"Pac-man's initial speed: "<<v.Lenght()<<std::endl;
+    Vector3 vD = v * 2;
+    std::cout<<"Pac-man's double speed: "<<vD.Lenght()<<std::endl;
+    Vector3 vH = v / 2;
+    std::cout<<"Pac-man's halved speed: "<<vH.Lenght()<<std::endl;
     return 0;
 }
